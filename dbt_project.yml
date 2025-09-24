@@ -1,0 +1,12 @@
+name: 'snowflake_dbt_demo'
+version: '1.0.0'
+config-version: 2
+
+profile: 'snowflake_dbt_demo'
+
+model-paths: ['models']
+seed-paths: ['data']
+
+models:
+  snowflake_dbt_demo:
+    +materialized: table   # build models as tables to make them easy to query

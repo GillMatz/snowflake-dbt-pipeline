@@ -1,0 +1,975 @@
+[0m18:53:52.642777 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7FA1B6FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7FA1B4750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7FA1645D0>]}
+
+
+============================== 18:53:52.648194 | df811864-3841-418a-8a1e-c2e7732aa9aa ==============================
+[0m18:53:52.648194 [info ] [MainThread]: Running with dbt=1.10.11
+[0m18:53:52.649197 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'empty': 'None', 'log_format': 'default', 'quiet': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline\\logs', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'no_print': 'None', 'invocation_command': 'dbt seed', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'target_path': 'None', 'write_json': 'True'}
+[0m18:53:53.950771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'df811864-3841-418a-8a1e-c2e7732aa9aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7F9949A10>]}
+[0m18:53:54.015824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'df811864-3841-418a-8a1e-c2e7732aa9aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A78C1D6C50>]}
+[0m18:53:54.028819 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m18:53:54.594155 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m18:53:54.596185 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:53:54.598522 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'df811864-3841-418a-8a1e-c2e7732aa9aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A78C265810>]}
+[0m18:53:58.715933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'df811864-3841-418a-8a1e-c2e7732aa9aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A78CA21010>]}
+[0m18:53:58.798997 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m18:53:58.822419 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m18:53:58.861093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'df811864-3841-418a-8a1e-c2e7732aa9aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A78CCABE10>]}
+[0m18:53:58.862102 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 479 macros
+[0m18:53:58.863094 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df811864-3841-418a-8a1e-c2e7732aa9aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A78CAAFA10>]}
+[0m18:53:58.865131 [info ] [MainThread]: 
+[0m18:53:58.866634 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:53:58.867633 [info ] [MainThread]: 
+[0m18:53:58.868635 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:53:58.869671 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB'
+[0m18:54:04.130277 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB"
+[0m18:54:04.131279 [debug] [ThreadPool]: On list_LEARN_DB: show terse schemas in database LEARN_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB"} */
+[0m18:54:04.131279 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:54:06.595100 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.467 seconds
+[0m18:54:06.616967 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB_PUBLIC'
+[0m18:54:06.655884 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB_PUBLIC"
+[0m18:54:06.657073 [debug] [ThreadPool]: On list_LEARN_DB_PUBLIC: show objects in LEARN_DB.PUBLIC
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB_PUBLIC"} */;
+[0m18:54:06.659141 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:54:08.891484 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 2.233 seconds
+[0m18:54:08.896334 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'df811864-3841-418a-8a1e-c2e7732aa9aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A78CC22E10>]}
+[0m18:54:08.920054 [debug] [Thread-1 (]: Began running node seed.snowflake_dbt_demo.raw_orders
+[0m18:54:08.921533 [info ] [Thread-1 (]: 1 of 1 START seed file PUBLIC.raw_orders ....................................... [RUN]
+[0m18:54:08.924009 [debug] [Thread-1 (]: Acquiring new snowflake connection 'seed.snowflake_dbt_demo.raw_orders'
+[0m18:54:08.925361 [debug] [Thread-1 (]: Began compiling node seed.snowflake_dbt_demo.raw_orders
+[0m18:54:08.926698 [debug] [Thread-1 (]: Began executing node seed.snowflake_dbt_demo.raw_orders
+[0m18:54:08.987046 [debug] [Thread-1 (]: Using snowflake connection "seed.snowflake_dbt_demo.raw_orders"
+[0m18:54:08.988045 [debug] [Thread-1 (]: On seed.snowflake_dbt_demo.raw_orders: create table LEARN_DB.PUBLIC.raw_orders (order_id integer,customer_id integer,order_date date,status text,amount float8)
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "seed.snowflake_dbt_demo.raw_orders"} */
+[0m18:54:08.990160 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:54:10.748299 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.758 seconds
+[0m18:54:10.764297 [debug] [Thread-1 (]: Using snowflake connection "seed.snowflake_dbt_demo.raw_orders"
+[0m18:54:10.765410 [debug] [Thread-1 (]: On seed.snowflake_dbt_demo.raw_orders: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "seed.snowflake_dbt_demo.raw_orders"} */
+[0m18:54:10.980067 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.215 seconds
+[0m18:54:10.983721 [debug] [Thread-1 (]: Using snowflake connection "seed.snowflake_dbt_demo.raw_orders"
+[0m18:54:10.984680 [debug] [Thread-1 (]: On seed.snowflake_dbt_demo.raw_orders: insert into LEARN_DB.PUBLIC.raw_orders (order_id, customer_id, order_date, status, amount) values
+            (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "seed.snowflake_dbt_demo.raw_orders"} */...
+[0m18:54:12.004256 [debug] [Thread-1 (]: SQL status: SUCCESS 4 in 1.018 seconds
+[0m18:54:12.005064 [debug] [Thread-1 (]: Using snowflake connection "seed.snowflake_dbt_demo.raw_orders"
+[0m18:54:12.006208 [debug] [Thread-1 (]: On seed.snowflake_dbt_demo.raw_orders: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "seed.snowflake_dbt_demo.raw_orders"} */
+[0m18:54:12.381421 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.373 seconds
+[0m18:54:12.396078 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.snowflake_dbt_demo.raw_orders"
+[0m18:54:12.442851 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'df811864-3841-418a-8a1e-c2e7732aa9aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A78CC40990>]}
+[0m18:54:12.443767 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file PUBLIC.raw_orders ................................... [[32mINSERT 4[0m in 3.52s]
+[0m18:54:12.444616 [debug] [Thread-1 (]: Finished running node seed.snowflake_dbt_demo.raw_orders
+[0m18:54:12.446623 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:54:12.447679 [debug] [MainThread]: Connection 'list_LEARN_DB' was left open.
+[0m18:54:12.447998 [debug] [MainThread]: On list_LEARN_DB: Close
+[0m18:54:12.640601 [debug] [MainThread]: Connection 'list_LEARN_DB_PUBLIC' was left open.
+[0m18:54:12.645352 [debug] [MainThread]: On list_LEARN_DB_PUBLIC: Close
+[0m18:54:12.883891 [debug] [MainThread]: Connection 'seed.snowflake_dbt_demo.raw_orders' was left open.
+[0m18:54:12.886231 [debug] [MainThread]: On seed.snowflake_dbt_demo.raw_orders: Close
+[0m18:54:13.062602 [info ] [MainThread]: 
+[0m18:54:13.065274 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 14.19 seconds (14.19s).
+[0m18:54:13.067719 [debug] [MainThread]: Command end result
+[0m18:54:13.101190 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m18:54:13.104161 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m18:54:13.112879 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\run_results.json
+[0m18:54:13.112879 [info ] [MainThread]: 
+[0m18:54:13.113877 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:54:13.114877 [info ] [MainThread]: 
+[0m18:54:13.116877 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m18:54:13.118882 [debug] [MainThread]: Command `dbt seed` succeeded at 18:54:13.118882 after 20.57 seconds
+[0m18:54:13.120918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7F9E3CE50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7F3709CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A7F9F39590>]}
+[0m18:54:13.120918 [debug] [MainThread]: Flushing usage events
+[0m18:54:14.332143 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:54:17.490217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5B13C4510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5B13F5250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5B13F6990>]}
+
+
+============================== 18:54:17.495181 | d119ee1d-48fa-4197-969b-67263cd953aa ==============================
+[0m18:54:17.495181 [info ] [MainThread]: Running with dbt=1.10.11
+[0m18:54:17.496180 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'empty': 'False', 'quiet': 'False', 'log_format': 'default', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline\\logs', 'introspect': 'True', 'no_print': 'None', 'fail_fast': 'False', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'target_path': 'None', 'write_json': 'True'}
+[0m18:54:19.267395 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd119ee1d-48fa-4197-969b-67263cd953aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5C3485F90>]}
+[0m18:54:19.373854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd119ee1d-48fa-4197-969b-67263cd953aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5C35ACED0>]}
+[0m18:54:19.384089 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m18:54:20.154202 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m18:54:20.484447 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:54:20.486808 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:54:20.549610 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd119ee1d-48fa-4197-969b-67263cd953aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5C38F90D0>]}
+[0m18:54:20.658860 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m18:54:20.661007 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m18:54:20.702790 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd119ee1d-48fa-4197-969b-67263cd953aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5C3816E50>]}
+[0m18:54:20.702926 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 479 macros
+[0m18:54:20.704344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd119ee1d-48fa-4197-969b-67263cd953aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5C39C46D0>]}
+[0m18:54:20.706346 [info ] [MainThread]: 
+[0m18:54:20.707904 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:54:20.709108 [info ] [MainThread]: 
+[0m18:54:20.710108 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:54:20.717165 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB'
+[0m18:54:20.841311 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB"
+[0m18:54:20.842616 [debug] [ThreadPool]: On list_LEARN_DB: show terse schemas in database LEARN_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB"} */
+[0m18:54:20.843314 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:54:22.977364 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.139 seconds
+[0m18:54:22.989412 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB_PUBLIC'
+[0m18:54:23.016446 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB_PUBLIC"
+[0m18:54:23.017407 [debug] [ThreadPool]: On list_LEARN_DB_PUBLIC: show objects in LEARN_DB.PUBLIC
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB_PUBLIC"} */;
+[0m18:54:23.018069 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:54:24.590716 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.573 seconds
+[0m18:54:24.593869 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd119ee1d-48fa-4197-969b-67263cd953aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5B13DABD0>]}
+[0m18:54:24.600010 [debug] [Thread-1 (]: Began running node model.snowflake_dbt_demo.stg_orders
+[0m18:54:24.601048 [info ] [Thread-1 (]: 1 of 2 START sql table model PUBLIC.stg_orders ................................. [RUN]
+[0m18:54:24.602014 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.snowflake_dbt_demo.stg_orders'
+[0m18:54:24.603013 [debug] [Thread-1 (]: Began compiling node model.snowflake_dbt_demo.stg_orders
+[0m18:54:24.611012 [debug] [Thread-1 (]: Writing injected SQL for node "model.snowflake_dbt_demo.stg_orders"
+[0m18:54:24.613014 [debug] [Thread-1 (]: Began executing node model.snowflake_dbt_demo.stg_orders
+[0m18:54:24.653000 [debug] [Thread-1 (]: Writing runtime sql for node "model.snowflake_dbt_demo.stg_orders"
+[0m18:54:24.654864 [debug] [Thread-1 (]: Using snowflake connection "model.snowflake_dbt_demo.stg_orders"
+[0m18:54:24.655879 [debug] [Thread-1 (]: On model.snowflake_dbt_demo.stg_orders: create or replace transient table LEARN_DB.PUBLIC.stg_orders
+    
+    
+    
+    as (-- Select from the seeded table (which dbt will create as LEARN_DB.PUBLIC.raw_orders)
+select
+  cast(order_id as number)      as order_id,
+  cast(customer_id as number)   as customer_id,
+  to_date(order_date)           as order_date,
+  status,
+  cast(amount as number(10,2))  as amount
+from LEARN_DB.PUBLIC.raw_orders
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "model.snowflake_dbt_demo.stg_orders"} */;
+[0m18:54:24.655879 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:54:27.114347 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.457 seconds
+[0m18:54:27.152311 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd119ee1d-48fa-4197-969b-67263cd953aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5C37E9250>]}
+[0m18:54:27.153344 [info ] [Thread-1 (]: 1 of 2 OK created sql table model PUBLIC.stg_orders ............................ [[32mSUCCESS 1[0m in 2.54s]
+[0m18:54:27.154501 [debug] [Thread-1 (]: Finished running node model.snowflake_dbt_demo.stg_orders
+[0m18:54:27.156503 [debug] [Thread-3 (]: Began running node model.snowflake_dbt_demo.customer_order_counts
+[0m18:54:27.156578 [info ] [Thread-3 (]: 2 of 2 START sql table model PUBLIC.customer_order_counts ...................... [RUN]
+[0m18:54:27.158503 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.snowflake_dbt_demo.customer_order_counts'
+[0m18:54:27.159504 [debug] [Thread-3 (]: Began compiling node model.snowflake_dbt_demo.customer_order_counts
+[0m18:54:27.161012 [debug] [Thread-3 (]: Writing injected SQL for node "model.snowflake_dbt_demo.customer_order_counts"
+[0m18:54:27.163337 [debug] [Thread-3 (]: Began executing node model.snowflake_dbt_demo.customer_order_counts
+[0m18:54:27.167454 [debug] [Thread-3 (]: Writing runtime sql for node "model.snowflake_dbt_demo.customer_order_counts"
+[0m18:54:27.169414 [debug] [Thread-3 (]: Using snowflake connection "model.snowflake_dbt_demo.customer_order_counts"
+[0m18:54:27.170450 [debug] [Thread-3 (]: On model.snowflake_dbt_demo.customer_order_counts: create or replace transient table LEARN_DB.PUBLIC.customer_order_counts
+    
+    
+    
+    as (select
+  customer_id,
+  count(*)                       as num_orders,
+  sum(amount)                    as total_amount,
+  min(order_date)                as first_order_date,
+  max(order_date)                as last_order_date
+from LEARN_DB.PUBLIC.stg_orders
+group by 1
+order by 1
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "model.snowflake_dbt_demo.customer_order_counts"} */;
+[0m18:54:27.170450 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:54:29.456312 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 2.284 seconds
+[0m18:54:29.465253 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'd119ee1d-48fa-4197-969b-67263cd953aa', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5C4542110>]}
+[0m18:54:29.467589 [info ] [Thread-3 (]: 2 of 2 OK created sql table model PUBLIC.customer_order_counts ................. [[32mSUCCESS 1[0m in 2.31s]
+[0m18:54:29.469600 [debug] [Thread-3 (]: Finished running node model.snowflake_dbt_demo.customer_order_counts
+[0m18:54:29.472600 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:54:29.473941 [debug] [MainThread]: Connection 'list_LEARN_DB' was left open.
+[0m18:54:29.473941 [debug] [MainThread]: On list_LEARN_DB: Close
+[0m18:54:29.711919 [debug] [MainThread]: Connection 'list_LEARN_DB_PUBLIC' was left open.
+[0m18:54:29.713225 [debug] [MainThread]: On list_LEARN_DB_PUBLIC: Close
+[0m18:54:29.883734 [debug] [MainThread]: Connection 'model.snowflake_dbt_demo.stg_orders' was left open.
+[0m18:54:29.886649 [debug] [MainThread]: On model.snowflake_dbt_demo.stg_orders: Close
+[0m18:54:30.066510 [debug] [MainThread]: Connection 'model.snowflake_dbt_demo.customer_order_counts' was left open.
+[0m18:54:30.078393 [debug] [MainThread]: On model.snowflake_dbt_demo.customer_order_counts: Close
+[0m18:54:30.255007 [info ] [MainThread]: 
+[0m18:54:30.258813 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 9.54 seconds (9.54s).
+[0m18:54:30.261813 [debug] [MainThread]: Command end result
+[0m18:54:30.309193 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m18:54:30.311665 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m18:54:30.319524 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\run_results.json
+[0m18:54:30.320914 [info ] [MainThread]: 
+[0m18:54:30.321913 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:54:30.323020 [info ] [MainThread]: 
+[0m18:54:30.324023 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:54:30.326020 [debug] [MainThread]: Command `dbt run` succeeded at 18:54:30.326020 after 12.94 seconds
+[0m18:54:30.326829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5AA959CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5C34B1190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C5AA92F2D0>]}
+[0m18:54:30.326829 [debug] [MainThread]: Flushing usage events
+[0m18:54:31.412262 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:54:38.691520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023331F40C90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023332299A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233322B5B90>]}
+
+
+============================== 18:54:38.696266 | c392b79b-406d-4145-9059-5790828e90ad ==============================
+[0m18:54:38.696266 [info ] [MainThread]: Running with dbt=1.10.11
+[0m18:54:38.697266 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'empty': 'False', 'quiet': 'False', 'log_format': 'default', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline\\logs', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'no_print': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'target_path': 'None', 'write_json': 'True'}
+[0m18:54:39.993340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c392b79b-406d-4145-9059-5790828e90ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233444006D0>]}
+[0m18:54:40.065023 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c392b79b-406d-4145-9059-5790828e90ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023344253150>]}
+[0m18:54:40.066971 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m18:54:40.533062 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m18:54:40.808431 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:54:40.815298 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:54:40.870277 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c392b79b-406d-4145-9059-5790828e90ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233446AB350>]}
+[0m18:54:40.959852 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m18:54:40.962026 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m18:54:40.994904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c392b79b-406d-4145-9059-5790828e90ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023344668DD0>]}
+[0m18:54:40.995905 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 479 macros
+[0m18:54:40.996905 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c392b79b-406d-4145-9059-5790828e90ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233447CC190>]}
+[0m18:54:40.998902 [info ] [MainThread]: 
+[0m18:54:41.000904 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:54:41.000904 [info ] [MainThread]: 
+[0m18:54:41.002939 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m18:54:41.008280 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB'
+[0m18:54:41.115347 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB"
+[0m18:54:41.116757 [debug] [ThreadPool]: On list_LEARN_DB: show terse schemas in database LEARN_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB"} */
+[0m18:54:41.117347 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:54:43.165497 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.050 seconds
+[0m18:54:43.176618 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB_PUBLIC'
+[0m18:54:43.198770 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB_PUBLIC"
+[0m18:54:43.200891 [debug] [ThreadPool]: On list_LEARN_DB_PUBLIC: show objects in LEARN_DB.PUBLIC
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB_PUBLIC"} */;
+[0m18:54:43.200891 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:54:45.079861 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.879 seconds
+[0m18:54:45.095906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c392b79b-406d-4145-9059-5790828e90ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023344267510>]}
+[0m18:54:45.110987 [debug] [Thread-1 (]: Began running node model.snowflake_dbt_demo.stg_orders
+[0m18:54:45.112835 [info ] [Thread-1 (]: 1 of 2 START sql table model PUBLIC.stg_orders ................................. [RUN]
+[0m18:54:45.115171 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.snowflake_dbt_demo.stg_orders'
+[0m18:54:45.117217 [debug] [Thread-1 (]: Began compiling node model.snowflake_dbt_demo.stg_orders
+[0m18:54:45.120091 [debug] [Thread-1 (]: Writing injected SQL for node "model.snowflake_dbt_demo.stg_orders"
+[0m18:54:45.131730 [debug] [Thread-1 (]: Began executing node model.snowflake_dbt_demo.stg_orders
+[0m18:54:45.170492 [debug] [Thread-1 (]: Writing runtime sql for node "model.snowflake_dbt_demo.stg_orders"
+[0m18:54:45.172804 [debug] [Thread-1 (]: Using snowflake connection "model.snowflake_dbt_demo.stg_orders"
+[0m18:54:45.173272 [debug] [Thread-1 (]: On model.snowflake_dbt_demo.stg_orders: create or replace transient table LEARN_DB.PUBLIC.stg_orders
+    
+    
+    
+    as (-- Select from the seeded table (which dbt will create as LEARN_DB.PUBLIC.raw_orders)
+select
+  cast(order_id as number)      as order_id,
+  cast(customer_id as number)   as customer_id,
+  to_date(order_date)           as order_date,
+  status,
+  cast(amount as number(10,2))  as amount
+from LEARN_DB.PUBLIC.raw_orders
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "model.snowflake_dbt_demo.stg_orders"} */;
+[0m18:54:45.173272 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:54:47.434205 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.267 seconds
+[0m18:54:47.499237 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c392b79b-406d-4145-9059-5790828e90ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023345427950>]}
+[0m18:54:47.500269 [info ] [Thread-1 (]: 1 of 2 OK created sql table model PUBLIC.stg_orders ............................ [[32mSUCCESS 1[0m in 2.38s]
+[0m18:54:47.502235 [debug] [Thread-1 (]: Finished running node model.snowflake_dbt_demo.stg_orders
+[0m18:54:47.503812 [debug] [Thread-3 (]: Began running node model.snowflake_dbt_demo.customer_order_counts
+[0m18:54:47.504822 [info ] [Thread-3 (]: 2 of 2 START sql table model PUBLIC.customer_order_counts ...................... [RUN]
+[0m18:54:47.506813 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.snowflake_dbt_demo.customer_order_counts'
+[0m18:54:47.507813 [debug] [Thread-3 (]: Began compiling node model.snowflake_dbt_demo.customer_order_counts
+[0m18:54:47.514650 [debug] [Thread-3 (]: Writing injected SQL for node "model.snowflake_dbt_demo.customer_order_counts"
+[0m18:54:47.516650 [debug] [Thread-3 (]: Began executing node model.snowflake_dbt_demo.customer_order_counts
+[0m18:54:47.527651 [debug] [Thread-3 (]: Writing runtime sql for node "model.snowflake_dbt_demo.customer_order_counts"
+[0m18:54:47.532060 [debug] [Thread-3 (]: Using snowflake connection "model.snowflake_dbt_demo.customer_order_counts"
+[0m18:54:47.534191 [debug] [Thread-3 (]: On model.snowflake_dbt_demo.customer_order_counts: create or replace transient table LEARN_DB.PUBLIC.customer_order_counts
+    
+    
+    
+    as (select
+  customer_id,
+  count(*)                       as num_orders,
+  sum(amount)                    as total_amount,
+  min(order_date)                as first_order_date,
+  max(order_date)                as last_order_date
+from LEARN_DB.PUBLIC.stg_orders
+group by 1
+order by 1
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "model.snowflake_dbt_demo.customer_order_counts"} */;
+[0m18:54:47.536061 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:54:49.638601 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 2.103 seconds
+[0m18:54:49.641007 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c392b79b-406d-4145-9059-5790828e90ad', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023345441C90>]}
+[0m18:54:49.643951 [info ] [Thread-3 (]: 2 of 2 OK created sql table model PUBLIC.customer_order_counts ................. [[32mSUCCESS 1[0m in 2.14s]
+[0m18:54:49.645254 [debug] [Thread-3 (]: Finished running node model.snowflake_dbt_demo.customer_order_counts
+[0m18:54:49.648251 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:54:49.648251 [debug] [MainThread]: Connection 'list_LEARN_DB' was left open.
+[0m18:54:49.649668 [debug] [MainThread]: On list_LEARN_DB: Close
+[0m18:54:49.815365 [debug] [MainThread]: Connection 'list_LEARN_DB_PUBLIC' was left open.
+[0m18:54:49.817563 [debug] [MainThread]: On list_LEARN_DB_PUBLIC: Close
+[0m18:54:50.016325 [debug] [MainThread]: Connection 'model.snowflake_dbt_demo.stg_orders' was left open.
+[0m18:54:50.017328 [debug] [MainThread]: On model.snowflake_dbt_demo.stg_orders: Close
+[0m18:54:50.184104 [debug] [MainThread]: Connection 'model.snowflake_dbt_demo.customer_order_counts' was left open.
+[0m18:54:50.186133 [debug] [MainThread]: On model.snowflake_dbt_demo.customer_order_counts: Close
+[0m18:54:50.388598 [info ] [MainThread]: 
+[0m18:54:50.395623 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 9.39 seconds (9.39s).
+[0m18:54:50.398595 [debug] [MainThread]: Command end result
+[0m18:54:50.435810 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m18:54:50.439809 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m18:54:50.447851 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\run_results.json
+[0m18:54:50.448852 [info ] [MainThread]: 
+[0m18:54:50.450855 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:54:50.451850 [info ] [MainThread]: 
+[0m18:54:50.451850 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m18:54:50.455883 [debug] [MainThread]: Command `dbt run` succeeded at 18:54:50.455883 after 11.85 seconds
+[0m18:54:50.456859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023331F40B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002332B7C9CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023332039590>]}
+[0m18:54:50.457358 [debug] [MainThread]: Flushing usage events
+[0m18:54:51.451464 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:05:03.768051 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216B4D63E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216B4D14D10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216B4D14F90>]}
+
+
+============================== 19:05:03.773146 | 84b65326-f4da-4842-a56e-f6aa15f291d1 ==============================
+[0m19:05:03.773146 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:05:03.774368 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'empty': 'None', 'log_format': 'default', 'quiet': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline\\logs', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'invocation_command': 'dbt seed', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'write_json': 'True', 'target_path': 'None'}
+[0m19:05:05.043793 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '84b65326-f4da-4842-a56e-f6aa15f291d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C6E78910>]}
+[0m19:05:05.112175 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '84b65326-f4da-4842-a56e-f6aa15f291d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C6D568D0>]}
+[0m19:05:05.115173 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m19:05:05.827992 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m19:05:08.483646 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:05:08.488877 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:05:08.539614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '84b65326-f4da-4842-a56e-f6aa15f291d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C6D56C10>]}
+[0m19:05:08.626613 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m19:05:08.629885 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m19:05:08.662475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '84b65326-f4da-4842-a56e-f6aa15f291d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C6F01E90>]}
+[0m19:05:08.663221 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 479 macros
+[0m19:05:08.664289 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84b65326-f4da-4842-a56e-f6aa15f291d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C71A0390>]}
+[0m19:05:08.666290 [info ] [MainThread]: 
+[0m19:05:08.667357 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:05:08.668356 [info ] [MainThread]: 
+[0m19:05:08.668791 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:05:08.671318 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB'
+[0m19:05:13.689769 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB"
+[0m19:05:13.696394 [debug] [ThreadPool]: On list_LEARN_DB: show terse schemas in database LEARN_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB"} */
+[0m19:05:13.696394 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:05:15.998166 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.302 seconds
+[0m19:05:16.019546 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB_PUBLIC'
+[0m19:05:16.041108 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB_PUBLIC"
+[0m19:05:16.044310 [debug] [ThreadPool]: On list_LEARN_DB_PUBLIC: show objects in LEARN_DB.PUBLIC
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB_PUBLIC"} */;
+[0m19:05:16.044310 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:05:18.098922 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 2.054 seconds
+[0m19:05:18.104172 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '84b65326-f4da-4842-a56e-f6aa15f291d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216B1664650>]}
+[0m19:05:18.113811 [debug] [Thread-1 (]: Began running node seed.snowflake_dbt_demo.raw_orders
+[0m19:05:18.115503 [info ] [Thread-1 (]: 1 of 1 START seed file PUBLIC.raw_orders ....................................... [RUN]
+[0m19:05:18.117534 [debug] [Thread-1 (]: Acquiring new snowflake connection 'seed.snowflake_dbt_demo.raw_orders'
+[0m19:05:18.118510 [debug] [Thread-1 (]: Began compiling node seed.snowflake_dbt_demo.raw_orders
+[0m19:05:18.118510 [debug] [Thread-1 (]: Began executing node seed.snowflake_dbt_demo.raw_orders
+[0m19:05:18.161462 [debug] [Thread-1 (]: Using snowflake connection "seed.snowflake_dbt_demo.raw_orders"
+[0m19:05:18.163507 [debug] [Thread-1 (]: On seed.snowflake_dbt_demo.raw_orders: create table LEARN_DB.PUBLIC.raw_orders (order_id integer,customer_id integer,order_date date,status text,amount float8)
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "seed.snowflake_dbt_demo.raw_orders"} */
+[0m19:05:18.163507 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:05:19.981759 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.818 seconds
+[0m19:05:20.007891 [debug] [Thread-1 (]: Using snowflake connection "seed.snowflake_dbt_demo.raw_orders"
+[0m19:05:20.018282 [debug] [Thread-1 (]: On seed.snowflake_dbt_demo.raw_orders: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "seed.snowflake_dbt_demo.raw_orders"} */
+[0m19:05:20.170442 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.153 seconds
+[0m19:05:20.176639 [debug] [Thread-1 (]: Using snowflake connection "seed.snowflake_dbt_demo.raw_orders"
+[0m19:05:20.178070 [debug] [Thread-1 (]: On seed.snowflake_dbt_demo.raw_orders: insert into LEARN_DB.PUBLIC.raw_orders (order_id, customer_id, order_date, status, amount) values
+            (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "seed.snowflake_dbt_demo.raw_orders"} */...
+[0m19:05:21.529060 [debug] [Thread-1 (]: SQL status: SUCCESS 4 in 1.349 seconds
+[0m19:05:21.530407 [debug] [Thread-1 (]: Using snowflake connection "seed.snowflake_dbt_demo.raw_orders"
+[0m19:05:21.530407 [debug] [Thread-1 (]: On seed.snowflake_dbt_demo.raw_orders: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "seed.snowflake_dbt_demo.raw_orders"} */
+[0m19:05:22.137516 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.608 seconds
+[0m19:05:22.146981 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.snowflake_dbt_demo.raw_orders"
+[0m19:05:22.196856 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '84b65326-f4da-4842-a56e-f6aa15f291d1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216C73DF5D0>]}
+[0m19:05:22.198129 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file PUBLIC.raw_orders ................................... [[32mINSERT 4[0m in 4.08s]
+[0m19:05:22.199131 [debug] [Thread-1 (]: Finished running node seed.snowflake_dbt_demo.raw_orders
+[0m19:05:22.201292 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:05:22.202291 [debug] [MainThread]: Connection 'list_LEARN_DB' was left open.
+[0m19:05:22.202395 [debug] [MainThread]: On list_LEARN_DB: Close
+[0m19:05:22.390475 [debug] [MainThread]: Connection 'list_LEARN_DB_PUBLIC' was left open.
+[0m19:05:22.392029 [debug] [MainThread]: On list_LEARN_DB_PUBLIC: Close
+[0m19:05:22.566247 [debug] [MainThread]: Connection 'seed.snowflake_dbt_demo.raw_orders' was left open.
+[0m19:05:22.567245 [debug] [MainThread]: On seed.snowflake_dbt_demo.raw_orders: Close
+[0m19:05:22.743632 [info ] [MainThread]: 
+[0m19:05:22.744265 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 14.07 seconds (14.07s).
+[0m19:05:22.747267 [debug] [MainThread]: Command end result
+[0m19:05:22.778674 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m19:05:22.781583 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m19:05:22.788137 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\run_results.json
+[0m19:05:22.788137 [info ] [MainThread]: 
+[0m19:05:22.789138 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:05:22.790141 [info ] [MainThread]: 
+[0m19:05:22.791137 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m19:05:22.793259 [debug] [MainThread]: Command `dbt seed` succeeded at 19:05:22.793259 after 19.16 seconds
+[0m19:05:22.795145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216B4D6BD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216B4D6AC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000216B4D69250>]}
+[0m19:05:22.798670 [debug] [MainThread]: Flushing usage events
+[0m19:05:24.035047 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:13:21.099848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B2E9F4610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B2E9CE950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B2EA27210>]}
+
+
+============================== 19:13:21.104520 | e6a9c572-e7ca-4f3d-bf2f-1a487edff9ea ==============================
+[0m19:13:21.104520 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:13:21.105519 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'target_path': 'None', 'cache_selected_only': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'empty': 'False', 'quiet': 'False', 'log_format': 'default', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline\\logs', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'no_print': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'write_json': 'True'}
+[0m19:13:22.335741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e6a9c572-e7ca-4f3d-bf2f-1a487edff9ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B40B12A50>]}
+[0m19:13:22.416205 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e6a9c572-e7ca-4f3d-bf2f-1a487edff9ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B409CE8D0>]}
+[0m19:13:22.419096 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m19:13:22.870745 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m19:13:23.135703 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:13:23.144934 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:13:23.187928 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e6a9c572-e7ca-4f3d-bf2f-1a487edff9ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B40F28110>]}
+[0m19:13:23.291932 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m19:13:23.294346 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m19:13:23.330565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e6a9c572-e7ca-4f3d-bf2f-1a487edff9ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B40D8FB10>]}
+[0m19:13:23.331506 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 479 macros
+[0m19:13:23.333381 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e6a9c572-e7ca-4f3d-bf2f-1a487edff9ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B40B7FF90>]}
+[0m19:13:23.335707 [info ] [MainThread]: 
+[0m19:13:23.337524 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:13:23.338725 [info ] [MainThread]: 
+[0m19:13:23.339588 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:13:23.344848 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB'
+[0m19:13:23.506710 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB"
+[0m19:13:23.512487 [debug] [ThreadPool]: On list_LEARN_DB: show terse schemas in database LEARN_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB"} */
+[0m19:13:23.512487 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:13:25.677688 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.165 seconds
+[0m19:13:25.687331 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB_PUBLIC'
+[0m19:13:25.712000 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB_PUBLIC"
+[0m19:13:25.714858 [debug] [ThreadPool]: On list_LEARN_DB_PUBLIC: show objects in LEARN_DB.PUBLIC
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB_PUBLIC"} */;
+[0m19:13:25.714858 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:13:27.201100 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.486 seconds
+[0m19:13:27.207620 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e6a9c572-e7ca-4f3d-bf2f-1a487edff9ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B2E15BAD0>]}
+[0m19:13:27.218306 [debug] [Thread-1 (]: Began running node model.snowflake_dbt_demo.stg_orders
+[0m19:13:27.220182 [info ] [Thread-1 (]: 1 of 2 START sql table model PUBLIC.stg_orders ................................. [RUN]
+[0m19:13:27.222658 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.snowflake_dbt_demo.stg_orders'
+[0m19:13:27.224251 [debug] [Thread-1 (]: Began compiling node model.snowflake_dbt_demo.stg_orders
+[0m19:13:27.228541 [debug] [Thread-1 (]: Writing injected SQL for node "model.snowflake_dbt_demo.stg_orders"
+[0m19:13:27.243027 [debug] [Thread-1 (]: Began executing node model.snowflake_dbt_demo.stg_orders
+[0m19:13:27.286666 [debug] [Thread-1 (]: Writing runtime sql for node "model.snowflake_dbt_demo.stg_orders"
+[0m19:13:27.287958 [debug] [Thread-1 (]: Using snowflake connection "model.snowflake_dbt_demo.stg_orders"
+[0m19:13:27.288999 [debug] [Thread-1 (]: On model.snowflake_dbt_demo.stg_orders: create or replace transient table LEARN_DB.PUBLIC.stg_orders
+    
+    
+    
+    as (-- Select from the seeded table (which dbt will create as LEARN_DB.PUBLIC.raw_orders)
+select
+  cast(order_id as number)      as order_id,
+  cast(customer_id as number)   as customer_id,
+  to_date(order_date)           as order_date,
+  status,
+  cast(amount as number(10,2))  as amount
+from LEARN_DB.PUBLIC.raw_orders
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "model.snowflake_dbt_demo.stg_orders"} */;
+[0m19:13:27.289960 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:13:29.514096 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.224 seconds
+[0m19:13:29.546515 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e6a9c572-e7ca-4f3d-bf2f-1a487edff9ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B41057D10>]}
+[0m19:13:29.547792 [info ] [Thread-1 (]: 1 of 2 OK created sql table model PUBLIC.stg_orders ............................ [[32mSUCCESS 1[0m in 2.32s]
+[0m19:13:29.548794 [debug] [Thread-1 (]: Finished running node model.snowflake_dbt_demo.stg_orders
+[0m19:13:29.549829 [debug] [Thread-3 (]: Began running node model.snowflake_dbt_demo.customer_order_counts
+[0m19:13:29.550823 [info ] [Thread-3 (]: 2 of 2 START sql table model PUBLIC.customer_order_counts ...................... [RUN]
+[0m19:13:29.551791 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.snowflake_dbt_demo.customer_order_counts'
+[0m19:13:29.552834 [debug] [Thread-3 (]: Began compiling node model.snowflake_dbt_demo.customer_order_counts
+[0m19:13:29.554832 [debug] [Thread-3 (]: Writing injected SQL for node "model.snowflake_dbt_demo.customer_order_counts"
+[0m19:13:29.556704 [debug] [Thread-3 (]: Began executing node model.snowflake_dbt_demo.customer_order_counts
+[0m19:13:29.563351 [debug] [Thread-3 (]: Writing runtime sql for node "model.snowflake_dbt_demo.customer_order_counts"
+[0m19:13:29.565336 [debug] [Thread-3 (]: Using snowflake connection "model.snowflake_dbt_demo.customer_order_counts"
+[0m19:13:29.566337 [debug] [Thread-3 (]: On model.snowflake_dbt_demo.customer_order_counts: create or replace transient table LEARN_DB.PUBLIC.customer_order_counts
+    
+    
+    
+    as (select
+  customer_id,
+  count(*)                       as num_orders,
+  sum(amount)                    as total_amount,
+  min(order_date)                as first_order_date,
+  max(order_date)                as last_order_date
+from LEARN_DB.PUBLIC.stg_orders
+group by 1
+order by 1
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "model.snowflake_dbt_demo.customer_order_counts"} */;
+[0m19:13:29.567344 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m19:13:31.835198 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 2.270 seconds
+[0m19:13:31.840862 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e6a9c572-e7ca-4f3d-bf2f-1a487edff9ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B41C3EF50>]}
+[0m19:13:31.849368 [info ] [Thread-3 (]: 2 of 2 OK created sql table model PUBLIC.customer_order_counts ................. [[32mSUCCESS 1[0m in 2.29s]
+[0m19:13:31.852377 [debug] [Thread-3 (]: Finished running node model.snowflake_dbt_demo.customer_order_counts
+[0m19:13:31.857240 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:13:31.858767 [debug] [MainThread]: Connection 'list_LEARN_DB' was left open.
+[0m19:13:31.860241 [debug] [MainThread]: On list_LEARN_DB: Close
+[0m19:13:32.042162 [debug] [MainThread]: Connection 'list_LEARN_DB_PUBLIC' was left open.
+[0m19:13:32.045163 [debug] [MainThread]: On list_LEARN_DB_PUBLIC: Close
+[0m19:13:32.307279 [debug] [MainThread]: Connection 'model.snowflake_dbt_demo.stg_orders' was left open.
+[0m19:13:32.310291 [debug] [MainThread]: On model.snowflake_dbt_demo.stg_orders: Close
+[0m19:13:32.488556 [debug] [MainThread]: Connection 'model.snowflake_dbt_demo.customer_order_counts' was left open.
+[0m19:13:32.497850 [debug] [MainThread]: On model.snowflake_dbt_demo.customer_order_counts: Close
+[0m19:13:32.702006 [info ] [MainThread]: 
+[0m19:13:32.703012 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 9.36 seconds (9.36s).
+[0m19:13:32.705043 [debug] [MainThread]: Command end result
+[0m19:13:32.733988 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m19:13:32.737210 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m19:13:32.745681 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\run_results.json
+[0m19:13:32.746672 [info ] [MainThread]: 
+[0m19:13:32.747324 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:13:32.748477 [info ] [MainThread]: 
+[0m19:13:32.749517 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m19:13:32.751520 [debug] [MainThread]: Command `dbt run` succeeded at 19:13:32.751520 after 11.75 seconds
+[0m19:13:32.753098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B27F9A010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B27F6F2D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026B27F6F010>]}
+[0m19:13:32.754066 [debug] [MainThread]: Flushing usage events
+[0m19:13:33.904175 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:13:41.350514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D1BBB7750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D1C3FE4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D1C45A790>]}
+
+
+============================== 19:13:41.354733 | 36079433-10ea-4057-afcc-3cfdb052061e ==============================
+[0m19:13:41.354733 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:13:41.356735 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'write_json': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'empty': 'False', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'profiles_dir': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline', 'log_format': 'default', 'quiet': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline\\logs', 'introspect': 'True', 'no_print': 'None', 'fail_fast': 'False', 'invocation_command': 'dbt run', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'target_path': 'None'}
+[0m19:13:42.586086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '36079433-10ea-4057-afcc-3cfdb052061e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D1C425290>]}
+[0m19:13:42.669325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '36079433-10ea-4057-afcc-3cfdb052061e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D2D42EA10>]}
+[0m19:13:42.671319 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m19:13:43.151865 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m19:13:43.419375 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:13:43.420374 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:13:43.468379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '36079433-10ea-4057-afcc-3cfdb052061e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D2E8555D0>]}
+[0m19:13:43.566044 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m19:13:43.570740 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m19:13:43.606417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '36079433-10ea-4057-afcc-3cfdb052061e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D2E808050>]}
+[0m19:13:43.606518 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 479 macros
+[0m19:13:43.607701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '36079433-10ea-4057-afcc-3cfdb052061e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D2EA36110>]}
+[0m19:13:43.609703 [info ] [MainThread]: 
+[0m19:13:43.610708 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:13:43.611709 [info ] [MainThread]: 
+[0m19:13:43.612711 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:13:43.618711 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB'
+[0m19:13:43.723781 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB"
+[0m19:13:43.724904 [debug] [ThreadPool]: On list_LEARN_DB: show terse schemas in database LEARN_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB"} */
+[0m19:13:43.724904 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:13:45.550180 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.825 seconds
+[0m19:13:45.552917 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB_PUBLIC'
+[0m19:13:45.558546 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB_PUBLIC"
+[0m19:13:45.567126 [debug] [ThreadPool]: On list_LEARN_DB_PUBLIC: show objects in LEARN_DB.PUBLIC
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB_PUBLIC"} */;
+[0m19:13:45.567126 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:13:47.247010 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.679 seconds
+[0m19:13:47.253659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '36079433-10ea-4057-afcc-3cfdb052061e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D2EF24910>]}
+[0m19:13:47.260954 [debug] [Thread-1 (]: Began running node model.snowflake_dbt_demo.stg_orders
+[0m19:13:47.262374 [info ] [Thread-1 (]: 1 of 2 START sql table model PUBLIC.stg_orders ................................. [RUN]
+[0m19:13:47.264002 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.snowflake_dbt_demo.stg_orders'
+[0m19:13:47.265004 [debug] [Thread-1 (]: Began compiling node model.snowflake_dbt_demo.stg_orders
+[0m19:13:47.274745 [debug] [Thread-1 (]: Writing injected SQL for node "model.snowflake_dbt_demo.stg_orders"
+[0m19:13:47.276165 [debug] [Thread-1 (]: Began executing node model.snowflake_dbt_demo.stg_orders
+[0m19:13:47.309733 [debug] [Thread-1 (]: Writing runtime sql for node "model.snowflake_dbt_demo.stg_orders"
+[0m19:13:47.314660 [debug] [Thread-1 (]: Using snowflake connection "model.snowflake_dbt_demo.stg_orders"
+[0m19:13:47.315550 [debug] [Thread-1 (]: On model.snowflake_dbt_demo.stg_orders: create or replace transient table LEARN_DB.PUBLIC.stg_orders
+    
+    
+    
+    as (-- Select from the seeded table (which dbt will create as LEARN_DB.PUBLIC.raw_orders)
+select
+  cast(order_id as number)      as order_id,
+  cast(customer_id as number)   as customer_id,
+  to_date(order_date)           as order_date,
+  status,
+  cast(amount as number(10,2))  as amount
+from LEARN_DB.PUBLIC.raw_orders
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "model.snowflake_dbt_demo.stg_orders"} */;
+[0m19:13:47.315550 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:13:49.844306 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.527 seconds
+[0m19:13:49.888921 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '36079433-10ea-4057-afcc-3cfdb052061e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D2EA84D50>]}
+[0m19:13:49.889898 [info ] [Thread-1 (]: 1 of 2 OK created sql table model PUBLIC.stg_orders ............................ [[32mSUCCESS 1[0m in 2.62s]
+[0m19:13:49.890896 [debug] [Thread-1 (]: Finished running node model.snowflake_dbt_demo.stg_orders
+[0m19:13:49.891935 [debug] [Thread-3 (]: Began running node model.snowflake_dbt_demo.customer_order_counts
+[0m19:13:49.892898 [info ] [Thread-3 (]: 2 of 2 START sql table model PUBLIC.customer_order_counts ...................... [RUN]
+[0m19:13:49.894535 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.snowflake_dbt_demo.customer_order_counts'
+[0m19:13:49.895591 [debug] [Thread-3 (]: Began compiling node model.snowflake_dbt_demo.customer_order_counts
+[0m19:13:49.897081 [debug] [Thread-3 (]: Writing injected SQL for node "model.snowflake_dbt_demo.customer_order_counts"
+[0m19:13:49.900737 [debug] [Thread-3 (]: Began executing node model.snowflake_dbt_demo.customer_order_counts
+[0m19:13:49.905731 [debug] [Thread-3 (]: Writing runtime sql for node "model.snowflake_dbt_demo.customer_order_counts"
+[0m19:13:49.906693 [debug] [Thread-3 (]: Using snowflake connection "model.snowflake_dbt_demo.customer_order_counts"
+[0m19:13:49.907792 [debug] [Thread-3 (]: On model.snowflake_dbt_demo.customer_order_counts: create or replace transient table LEARN_DB.PUBLIC.customer_order_counts
+    
+    
+    
+    as (select
+  customer_id,
+  count(*)                       as num_orders,
+  sum(amount)                    as total_amount,
+  min(order_date)                as first_order_date,
+  max(order_date)                as last_order_date
+from LEARN_DB.PUBLIC.stg_orders
+group by 1
+order by 1
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "model.snowflake_dbt_demo.customer_order_counts"} */;
+[0m19:13:49.908729 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m19:13:53.073119 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 3.164 seconds
+[0m19:13:53.076231 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '36079433-10ea-4057-afcc-3cfdb052061e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D2E7BFE90>]}
+[0m19:13:53.083906 [info ] [Thread-3 (]: 2 of 2 OK created sql table model PUBLIC.customer_order_counts ................. [[32mSUCCESS 1[0m in 3.18s]
+[0m19:13:53.086023 [debug] [Thread-3 (]: Finished running node model.snowflake_dbt_demo.customer_order_counts
+[0m19:13:53.089480 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:13:53.090627 [debug] [MainThread]: Connection 'list_LEARN_DB' was left open.
+[0m19:13:53.091697 [debug] [MainThread]: On list_LEARN_DB: Close
+[0m19:13:53.248277 [debug] [MainThread]: Connection 'list_LEARN_DB_PUBLIC' was left open.
+[0m19:13:53.250277 [debug] [MainThread]: On list_LEARN_DB_PUBLIC: Close
+[0m19:13:53.423419 [debug] [MainThread]: Connection 'model.snowflake_dbt_demo.stg_orders' was left open.
+[0m19:13:53.424607 [debug] [MainThread]: On model.snowflake_dbt_demo.stg_orders: Close
+[0m19:13:53.590326 [debug] [MainThread]: Connection 'model.snowflake_dbt_demo.customer_order_counts' was left open.
+[0m19:13:53.598304 [debug] [MainThread]: On model.snowflake_dbt_demo.customer_order_counts: Close
+[0m19:13:53.788431 [info ] [MainThread]: 
+[0m19:13:53.790703 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 10.18 seconds (10.18s).
+[0m19:13:53.793601 [debug] [MainThread]: Command end result
+[0m19:13:53.874008 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m19:13:53.876558 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m19:13:53.891448 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\run_results.json
+[0m19:13:53.892098 [info ] [MainThread]: 
+[0m19:13:53.893217 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:13:53.894129 [info ] [MainThread]: 
+[0m19:13:53.895097 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m19:13:53.897098 [debug] [MainThread]: Command `dbt run` succeeded at 19:13:53.897098 after 12.63 seconds
+[0m19:13:53.898098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D1C459250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D159F9CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027D159CF2D0>]}
+[0m19:13:53.898098 [debug] [MainThread]: Flushing usage events
+[0m19:13:54.942292 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:16:12.960461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185D351FE50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185D3575690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185D3574C10>]}
+
+
+============================== 19:16:12.969181 | 4b5a6953-8ea4-4e27-a897-3df34bd78b81 ==============================
+[0m19:16:12.969181 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:16:12.971177 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'empty': 'None', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'profiles_dir': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline', 'quiet': 'False', 'log_format': 'default', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline\\logs', 'introspect': 'True', 'invocation_command': 'dbt seed', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'write_json': 'True', 'target_path': 'None'}
+[0m19:16:14.631068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4b5a6953-8ea4-4e27-a897-3df34bd78b81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185E54EED90>]}
+[0m19:16:14.718731 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4b5a6953-8ea4-4e27-a897-3df34bd78b81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185D256D9D0>]}
+[0m19:16:14.720618 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m19:16:15.318857 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m19:16:15.606243 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:16:15.606845 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:16:15.670406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4b5a6953-8ea4-4e27-a897-3df34bd78b81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185E5A7C9D0>]}
+[0m19:16:15.778423 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m19:16:15.781438 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m19:16:15.822358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b5a6953-8ea4-4e27-a897-3df34bd78b81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185E5B31990>]}
+[0m19:16:15.823322 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 479 macros
+[0m19:16:15.824390 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b5a6953-8ea4-4e27-a897-3df34bd78b81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185E5A91850>]}
+[0m19:16:15.827325 [info ] [MainThread]: 
+[0m19:16:15.829319 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:16:15.830320 [info ] [MainThread]: 
+[0m19:16:15.831323 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:16:15.833664 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB'
+[0m19:16:15.958801 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB"
+[0m19:16:15.960111 [debug] [ThreadPool]: On list_LEARN_DB: show terse schemas in database LEARN_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB"} */
+[0m19:16:15.960763 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:16:18.211104 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.251 seconds
+[0m19:16:18.220061 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB_PUBLIC'
+[0m19:16:18.225135 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB_PUBLIC"
+[0m19:16:18.236943 [debug] [ThreadPool]: On list_LEARN_DB_PUBLIC: show objects in LEARN_DB.PUBLIC
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB_PUBLIC"} */;
+[0m19:16:18.237949 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:16:19.946596 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 1.708 seconds
+[0m19:16:19.958771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b5a6953-8ea4-4e27-a897-3df34bd78b81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185E5928790>]}
+[0m19:16:19.980224 [debug] [Thread-1 (]: Began running node seed.snowflake_dbt_demo.raw_orders
+[0m19:16:19.984309 [info ] [Thread-1 (]: 1 of 1 START seed file PUBLIC.raw_orders ....................................... [RUN]
+[0m19:16:19.989300 [debug] [Thread-1 (]: Acquiring new snowflake connection 'seed.snowflake_dbt_demo.raw_orders'
+[0m19:16:19.991463 [debug] [Thread-1 (]: Began compiling node seed.snowflake_dbt_demo.raw_orders
+[0m19:16:19.994326 [debug] [Thread-1 (]: Began executing node seed.snowflake_dbt_demo.raw_orders
+[0m19:16:20.050890 [debug] [Thread-1 (]: Using snowflake connection "seed.snowflake_dbt_demo.raw_orders"
+[0m19:16:20.052159 [debug] [Thread-1 (]: On seed.snowflake_dbt_demo.raw_orders: create table LEARN_DB.PUBLIC.raw_orders (order_id integer,customer_id integer,order_date date,status text,amount float8)
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "seed.snowflake_dbt_demo.raw_orders"} */
+[0m19:16:20.052858 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:16:21.522739 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 1.471 seconds
+[0m19:16:21.555981 [debug] [Thread-1 (]: Using snowflake connection "seed.snowflake_dbt_demo.raw_orders"
+[0m19:16:21.561630 [debug] [Thread-1 (]: On seed.snowflake_dbt_demo.raw_orders: BEGIN
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "seed.snowflake_dbt_demo.raw_orders"} */
+[0m19:16:21.714495 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.152 seconds
+[0m19:16:21.718494 [debug] [Thread-1 (]: Using snowflake connection "seed.snowflake_dbt_demo.raw_orders"
+[0m19:16:21.721449 [debug] [Thread-1 (]: On seed.snowflake_dbt_demo.raw_orders: insert into LEARN_DB.PUBLIC.raw_orders (order_id, customer_id, order_date, status, amount) values
+            (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "seed.snowflake_dbt_demo.raw_orders"} */...
+[0m19:16:22.342168 [debug] [Thread-1 (]: SQL status: SUCCESS 4 in 0.625 seconds
+[0m19:16:22.350190 [debug] [Thread-1 (]: Using snowflake connection "seed.snowflake_dbt_demo.raw_orders"
+[0m19:16:22.351466 [debug] [Thread-1 (]: On seed.snowflake_dbt_demo.raw_orders: COMMIT
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "seed.snowflake_dbt_demo.raw_orders"} */
+[0m19:16:22.663776 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.314 seconds
+[0m19:16:22.670609 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.snowflake_dbt_demo.raw_orders"
+[0m19:16:22.725071 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b5a6953-8ea4-4e27-a897-3df34bd78b81', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185E66D6050>]}
+[0m19:16:22.726523 [info ] [Thread-1 (]: 1 of 1 OK loaded seed file PUBLIC.raw_orders ................................... [[32mINSERT 4[0m in 2.73s]
+[0m19:16:22.728054 [debug] [Thread-1 (]: Finished running node seed.snowflake_dbt_demo.raw_orders
+[0m19:16:22.730054 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:16:22.730054 [debug] [MainThread]: Connection 'list_LEARN_DB' was left open.
+[0m19:16:22.731054 [debug] [MainThread]: On list_LEARN_DB: Close
+[0m19:16:22.937929 [debug] [MainThread]: Connection 'list_LEARN_DB_PUBLIC' was left open.
+[0m19:16:22.939694 [debug] [MainThread]: On list_LEARN_DB_PUBLIC: Close
+[0m19:16:23.145360 [debug] [MainThread]: Connection 'seed.snowflake_dbt_demo.raw_orders' was left open.
+[0m19:16:23.150914 [debug] [MainThread]: On seed.snowflake_dbt_demo.raw_orders: Close
+[0m19:16:23.325336 [info ] [MainThread]: 
+[0m19:16:23.326387 [info ] [MainThread]: Finished running 1 seed in 0 hours 0 minutes and 7.49 seconds (7.49s).
+[0m19:16:23.327387 [debug] [MainThread]: Command end result
+[0m19:16:23.359357 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m19:16:23.362338 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m19:16:23.369912 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\run_results.json
+[0m19:16:23.370928 [info ] [MainThread]: 
+[0m19:16:23.371881 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:16:23.372878 [info ] [MainThread]: 
+[0m19:16:23.374880 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m19:16:23.376878 [debug] [MainThread]: Command `dbt seed` succeeded at 19:16:23.376878 after 10.53 seconds
+[0m19:16:23.378247 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185D3559090>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185D3597910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000185CCB29F50>]}
+[0m19:16:23.378247 [debug] [MainThread]: Flushing usage events
+[0m19:16:24.569116 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:16:52.988098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002787293E8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027872602110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027872946990>]}
+
+
+============================== 19:16:52.994165 | 519479cc-51e2-4bf7-af88-f04929fde125 ==============================
+[0m19:16:52.994165 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:16:52.995058 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'target_path': 'None', 'cache_selected_only': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'empty': 'False', 'log_format': 'default', 'quiet': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline\\logs', 'introspect': 'True', 'invocation_command': 'dbt run', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'write_json': 'True'}
+[0m19:16:54.555012 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '519479cc-51e2-4bf7-af88-f04929fde125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027872129A10>]}
+[0m19:16:54.683093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '519479cc-51e2-4bf7-af88-f04929fde125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002786F50D390>]}
+[0m19:16:54.685095 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m19:16:55.247613 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m19:16:55.552834 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:16:55.553804 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:16:55.611043 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '519479cc-51e2-4bf7-af88-f04929fde125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027804E87E10>]}
+[0m19:16:55.713549 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m19:16:55.715867 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m19:16:55.751676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '519479cc-51e2-4bf7-af88-f04929fde125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027804F64890>]}
+[0m19:16:55.752753 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 479 macros
+[0m19:16:55.754766 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '519479cc-51e2-4bf7-af88-f04929fde125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027804D5EA50>]}
+[0m19:16:55.757677 [info ] [MainThread]: 
+[0m19:16:55.758690 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:16:55.759682 [info ] [MainThread]: 
+[0m19:16:55.760718 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:16:55.766676 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB'
+[0m19:16:55.884456 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB"
+[0m19:16:55.884992 [debug] [ThreadPool]: On list_LEARN_DB: show terse schemas in database LEARN_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB"} */
+[0m19:16:55.885465 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:16:57.889845 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.004 seconds
+[0m19:16:57.894813 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB_PUBLIC'
+[0m19:16:57.914808 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB_PUBLIC"
+[0m19:16:57.915808 [debug] [ThreadPool]: On list_LEARN_DB_PUBLIC: show objects in LEARN_DB.PUBLIC
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB_PUBLIC"} */;
+[0m19:16:57.915808 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:16:59.426505 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.511 seconds
+[0m19:16:59.432460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '519479cc-51e2-4bf7-af88-f04929fde125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027804A35E50>]}
+[0m19:16:59.443455 [debug] [Thread-1 (]: Began running node model.snowflake_dbt_demo.stg_orders
+[0m19:16:59.446460 [info ] [Thread-1 (]: 1 of 2 START sql table model PUBLIC.stg_orders ................................. [RUN]
+[0m19:16:59.448456 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.snowflake_dbt_demo.stg_orders'
+[0m19:16:59.450651 [debug] [Thread-1 (]: Began compiling node model.snowflake_dbt_demo.stg_orders
+[0m19:16:59.465673 [debug] [Thread-1 (]: Writing injected SQL for node "model.snowflake_dbt_demo.stg_orders"
+[0m19:16:59.468672 [debug] [Thread-1 (]: Began executing node model.snowflake_dbt_demo.stg_orders
+[0m19:16:59.517667 [debug] [Thread-1 (]: Writing runtime sql for node "model.snowflake_dbt_demo.stg_orders"
+[0m19:16:59.521908 [debug] [Thread-1 (]: Using snowflake connection "model.snowflake_dbt_demo.stg_orders"
+[0m19:16:59.522662 [debug] [Thread-1 (]: On model.snowflake_dbt_demo.stg_orders: create or replace transient table LEARN_DB.PUBLIC.stg_orders
+    
+    
+    
+    as (-- Select from the seeded table (which dbt will create as LEARN_DB.PUBLIC.raw_orders)
+select
+  cast(order_id as number)      as order_id,
+  cast(customer_id as number)   as customer_id,
+  to_date(order_date)           as order_date,
+  status,
+  cast(amount as number(10,2))  as amount
+from LEARN_DB.PUBLIC.raw_orders
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "model.snowflake_dbt_demo.stg_orders"} */;
+[0m19:16:59.523662 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:17:01.933688 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.410 seconds
+[0m19:17:01.963684 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '519479cc-51e2-4bf7-af88-f04929fde125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027805474690>]}
+[0m19:17:01.964683 [info ] [Thread-1 (]: 1 of 2 OK created sql table model PUBLIC.stg_orders ............................ [[32mSUCCESS 1[0m in 2.51s]
+[0m19:17:01.965943 [debug] [Thread-1 (]: Finished running node model.snowflake_dbt_demo.stg_orders
+[0m19:17:01.967709 [debug] [Thread-3 (]: Began running node model.snowflake_dbt_demo.customer_order_counts
+[0m19:17:01.968359 [info ] [Thread-3 (]: 2 of 2 START sql table model PUBLIC.customer_order_counts ...................... [RUN]
+[0m19:17:01.969682 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.snowflake_dbt_demo.customer_order_counts'
+[0m19:17:01.970686 [debug] [Thread-3 (]: Began compiling node model.snowflake_dbt_demo.customer_order_counts
+[0m19:17:01.976724 [debug] [Thread-3 (]: Writing injected SQL for node "model.snowflake_dbt_demo.customer_order_counts"
+[0m19:17:01.977684 [debug] [Thread-3 (]: Began executing node model.snowflake_dbt_demo.customer_order_counts
+[0m19:17:01.982719 [debug] [Thread-3 (]: Writing runtime sql for node "model.snowflake_dbt_demo.customer_order_counts"
+[0m19:17:01.985683 [debug] [Thread-3 (]: Using snowflake connection "model.snowflake_dbt_demo.customer_order_counts"
+[0m19:17:01.987433 [debug] [Thread-3 (]: On model.snowflake_dbt_demo.customer_order_counts: create or replace transient table LEARN_DB.PUBLIC.customer_order_counts
+    
+    
+    
+    as (select
+  customer_id,
+  count(*)                       as num_orders,
+  sum(amount)                    as total_amount,
+  min(order_date)                as first_order_date,
+  max(order_date)                as last_order_date
+from LEARN_DB.PUBLIC.stg_orders
+group by 1
+order by 1
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "model.snowflake_dbt_demo.customer_order_counts"} */;
+[0m19:17:01.988687 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m19:17:04.162968 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 2.174 seconds
+[0m19:17:04.165968 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '519479cc-51e2-4bf7-af88-f04929fde125', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027805AF1250>]}
+[0m19:17:04.167968 [info ] [Thread-3 (]: 2 of 2 OK created sql table model PUBLIC.customer_order_counts ................. [[32mSUCCESS 1[0m in 2.20s]
+[0m19:17:04.169024 [debug] [Thread-3 (]: Finished running node model.snowflake_dbt_demo.customer_order_counts
+[0m19:17:04.171967 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:17:04.173284 [debug] [MainThread]: Connection 'list_LEARN_DB' was left open.
+[0m19:17:04.173967 [debug] [MainThread]: On list_LEARN_DB: Close
+[0m19:17:04.339258 [debug] [MainThread]: Connection 'list_LEARN_DB_PUBLIC' was left open.
+[0m19:17:04.339977 [debug] [MainThread]: On list_LEARN_DB_PUBLIC: Close
+[0m19:17:04.525135 [debug] [MainThread]: Connection 'model.snowflake_dbt_demo.stg_orders' was left open.
+[0m19:17:04.526682 [debug] [MainThread]: On model.snowflake_dbt_demo.stg_orders: Close
+[0m19:17:04.698072 [debug] [MainThread]: Connection 'model.snowflake_dbt_demo.customer_order_counts' was left open.
+[0m19:17:04.699487 [debug] [MainThread]: On model.snowflake_dbt_demo.customer_order_counts: Close
+[0m19:17:04.905600 [info ] [MainThread]: 
+[0m19:17:04.907662 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 9.14 seconds (9.14s).
+[0m19:17:04.910305 [debug] [MainThread]: Command end result
+[0m19:17:04.961615 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m19:17:04.964865 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m19:17:04.974776 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\run_results.json
+[0m19:17:04.975768 [info ] [MainThread]: 
+[0m19:17:04.977074 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:17:04.978072 [info ] [MainThread]: 
+[0m19:17:04.979582 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m19:17:04.981492 [debug] [MainThread]: Command `dbt run` succeeded at 19:17:04.980582 after 12.09 seconds
+[0m19:17:04.982492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027872997F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027872995E10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002786BED9CD0>]}
+[0m19:17:04.983378 [debug] [MainThread]: Flushing usage events
+[0m19:17:06.326646 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:21:26.683886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D43A14A10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D437A9610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D43692110>]}
+
+
+============================== 19:21:26.689052 | b3491825-8017-4734-81d3-bf9356b048dd ==============================
+[0m19:21:26.689052 [info ] [MainThread]: Running with dbt=1.10.11
+[0m19:21:26.690270 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline', 'debug': 'False', 'static_parser': 'True', 'log_cache_events': 'False', 'empty': 'False', 'quiet': 'False', 'log_format': 'default', 'use_colors': 'True', 'partial_parse': 'True', 'version_check': 'True', 'log_path': 'C:\\CardiacSense\\GitHub\\snowflake-dbt-pipeline\\logs', 'introspect': 'True', 'invocation_command': 'dbt run', 'fail_fast': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'write_json': 'True', 'target_path': 'None'}
+[0m19:21:27.992088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b3491825-8017-4734-81d3-bf9356b048dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D55AF3D50>]}
+[0m19:21:28.058475 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b3491825-8017-4734-81d3-bf9356b048dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D559CED50>]}
+[0m19:21:28.060478 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m19:21:28.554476 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m19:21:28.820379 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:21:28.821378 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:21:28.875379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b3491825-8017-4734-81d3-bf9356b048dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D55F290D0>]}
+[0m19:21:28.963380 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m19:21:28.966380 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m19:21:28.996379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b3491825-8017-4734-81d3-bf9356b048dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D55B6D6D0>]}
+[0m19:21:28.997379 [info ] [MainThread]: Found 2 models, 1 seed, 6 data tests, 479 macros
+[0m19:21:28.998378 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b3491825-8017-4734-81d3-bf9356b048dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D55B3BF50>]}
+[0m19:21:29.000377 [info ] [MainThread]: 
+[0m19:21:29.001378 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m19:21:29.001378 [info ] [MainThread]: 
+[0m19:21:29.002378 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m19:21:29.009383 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB'
+[0m19:21:29.113079 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB"
+[0m19:21:29.114226 [debug] [ThreadPool]: On list_LEARN_DB: show terse schemas in database LEARN_DB
+    limit 10000
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB"} */
+[0m19:21:29.114226 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:21:31.255132 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 2.141 seconds
+[0m19:21:31.264785 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_LEARN_DB_PUBLIC'
+[0m19:21:31.289757 [debug] [ThreadPool]: Using snowflake connection "list_LEARN_DB_PUBLIC"
+[0m19:21:31.291205 [debug] [ThreadPool]: On list_LEARN_DB_PUBLIC: show objects in LEARN_DB.PUBLIC
+    limit 10000
+    
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "connection_name": "list_LEARN_DB_PUBLIC"} */;
+[0m19:21:31.291730 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:21:32.867265 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 1.576 seconds
+[0m19:21:32.878263 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b3491825-8017-4734-81d3-bf9356b048dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D43A0AE10>]}
+[0m19:21:32.889002 [debug] [Thread-1 (]: Began running node model.snowflake_dbt_demo.stg_orders
+[0m19:21:32.890314 [info ] [Thread-1 (]: 1 of 2 START sql table model PUBLIC.stg_orders ................................. [RUN]
+[0m19:21:32.892973 [debug] [Thread-1 (]: Acquiring new snowflake connection 'model.snowflake_dbt_demo.stg_orders'
+[0m19:21:32.894074 [debug] [Thread-1 (]: Began compiling node model.snowflake_dbt_demo.stg_orders
+[0m19:21:32.906974 [debug] [Thread-1 (]: Writing injected SQL for node "model.snowflake_dbt_demo.stg_orders"
+[0m19:21:32.909974 [debug] [Thread-1 (]: Began executing node model.snowflake_dbt_demo.stg_orders
+[0m19:21:32.948015 [debug] [Thread-1 (]: Writing runtime sql for node "model.snowflake_dbt_demo.stg_orders"
+[0m19:21:32.950094 [debug] [Thread-1 (]: Using snowflake connection "model.snowflake_dbt_demo.stg_orders"
+[0m19:21:32.951009 [debug] [Thread-1 (]: On model.snowflake_dbt_demo.stg_orders: create or replace transient table LEARN_DB.PUBLIC.stg_orders
+    
+    
+    
+    as (-- Select from the seeded table (which dbt will create as LEARN_DB.PUBLIC.raw_orders)
+select
+  cast(order_id as number)      as order_id,
+  cast(customer_id as number)   as customer_id,
+  to_date(order_date)           as order_date,
+  status,
+  cast(amount as number(10,2))  as amount
+from LEARN_DB.PUBLIC.raw_orders
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "model.snowflake_dbt_demo.stg_orders"} */;
+[0m19:21:32.951009 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m19:21:35.286049 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 2.334 seconds
+[0m19:21:35.334834 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b3491825-8017-4734-81d3-bf9356b048dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D56B87250>]}
+[0m19:21:35.335833 [info ] [Thread-1 (]: 1 of 2 OK created sql table model PUBLIC.stg_orders ............................ [[32mSUCCESS 1[0m in 2.44s]
+[0m19:21:35.337832 [debug] [Thread-1 (]: Finished running node model.snowflake_dbt_demo.stg_orders
+[0m19:21:35.339831 [debug] [Thread-3 (]: Began running node model.snowflake_dbt_demo.customer_order_counts
+[0m19:21:35.340836 [info ] [Thread-3 (]: 2 of 2 START sql table model PUBLIC.customer_order_counts ...................... [RUN]
+[0m19:21:35.343318 [debug] [Thread-3 (]: Acquiring new snowflake connection 'model.snowflake_dbt_demo.customer_order_counts'
+[0m19:21:35.344833 [debug] [Thread-3 (]: Began compiling node model.snowflake_dbt_demo.customer_order_counts
+[0m19:21:35.352833 [debug] [Thread-3 (]: Writing injected SQL for node "model.snowflake_dbt_demo.customer_order_counts"
+[0m19:21:35.354833 [debug] [Thread-3 (]: Began executing node model.snowflake_dbt_demo.customer_order_counts
+[0m19:21:35.364835 [debug] [Thread-3 (]: Writing runtime sql for node "model.snowflake_dbt_demo.customer_order_counts"
+[0m19:21:35.368184 [debug] [Thread-3 (]: Using snowflake connection "model.snowflake_dbt_demo.customer_order_counts"
+[0m19:21:35.368831 [debug] [Thread-3 (]: On model.snowflake_dbt_demo.customer_order_counts: create or replace transient table LEARN_DB.PUBLIC.customer_order_counts
+    
+    
+    
+    as (select
+  customer_id,
+  count(*)                       as num_orders,
+  sum(amount)                    as total_amount,
+  min(order_date)                as first_order_date,
+  max(order_date)                as last_order_date
+from LEARN_DB.PUBLIC.stg_orders
+group by 1
+order by 1
+    )
+
+/* {"app": "dbt", "dbt_version": "1.10.11", "profile_name": "snowflake_dbt_demo", "target_name": "dev", "node_id": "model.snowflake_dbt_demo.customer_order_counts"} */;
+[0m19:21:35.370285 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m19:21:37.827752 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 2.457 seconds
+[0m19:21:37.835795 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b3491825-8017-4734-81d3-bf9356b048dd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D56AF7E50>]}
+[0m19:21:37.837748 [info ] [Thread-3 (]: 2 of 2 OK created sql table model PUBLIC.customer_order_counts ................. [[32mSUCCESS 1[0m in 2.49s]
+[0m19:21:37.839794 [debug] [Thread-3 (]: Finished running node model.snowflake_dbt_demo.customer_order_counts
+[0m19:21:37.842745 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:21:37.843747 [debug] [MainThread]: Connection 'list_LEARN_DB' was left open.
+[0m19:21:37.845748 [debug] [MainThread]: On list_LEARN_DB: Close
+[0m19:21:38.032037 [debug] [MainThread]: Connection 'list_LEARN_DB_PUBLIC' was left open.
+[0m19:21:38.032685 [debug] [MainThread]: On list_LEARN_DB_PUBLIC: Close
+[0m19:21:38.211180 [debug] [MainThread]: Connection 'model.snowflake_dbt_demo.stg_orders' was left open.
+[0m19:21:38.214171 [debug] [MainThread]: On model.snowflake_dbt_demo.stg_orders: Close
+[0m19:21:38.418818 [debug] [MainThread]: Connection 'model.snowflake_dbt_demo.customer_order_counts' was left open.
+[0m19:21:38.420318 [debug] [MainThread]: On model.snowflake_dbt_demo.customer_order_counts: Close
+[0m19:21:38.595206 [info ] [MainThread]: 
+[0m19:21:38.597167 [info ] [MainThread]: Finished running 2 table models in 0 hours 0 minutes and 9.59 seconds (9.59s).
+[0m19:21:38.599199 [debug] [MainThread]: Command end result
+[0m19:21:38.636162 [debug] [MainThread]: Wrote artifact WritableManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\manifest.json
+[0m19:21:38.638754 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\semantic_manifest.json
+[0m19:21:38.646165 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\CardiacSense\GitHub\snowflake-dbt-pipeline\target\run_results.json
+[0m19:21:38.646165 [info ] [MainThread]: 
+[0m19:21:38.647162 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:21:38.648164 [info ] [MainThread]: 
+[0m19:21:38.649163 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m19:21:38.651202 [debug] [MainThread]: Command `dbt run` succeeded at 19:21:38.651202 after 12.06 seconds
+[0m19:21:38.651202 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D3CF29CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D3CEFF2D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025D3CEFF7D0>]}
+[0m19:21:38.652167 [debug] [MainThread]: Flushing usage events
+[0m19:21:39.843050 [debug] [MainThread]: An error was encountered while trying to flush usage events

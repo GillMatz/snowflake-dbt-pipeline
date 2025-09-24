@@ -1,0 +1,14 @@
+
+    
+    
+    
+    create table LEARN_DB.PUBLIC.raw_orders (order_id integer,customer_id integer,order_date date,status text,amount float8)
+  ;
+    -- dbt seed --
+    
+            insert into LEARN_DB.PUBLIC.raw_orders (order_id, customer_id, order_date, status, amount) values
+            (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)
+        
+
+;
+  
