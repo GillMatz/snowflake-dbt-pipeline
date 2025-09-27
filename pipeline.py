@@ -15,12 +15,14 @@ DB  = os.getenv("SNOWFLAKE_DATABASE")
 SC  = os.getenv("SNOWFLAKE_SCHEMA")
 
 def sf_conn():
+    # Create a Snowflake connection using environment variables
     return snowflake.connector.connect(
         account=ACC, user=USR, password=PWD,
         role=ROL, warehouse=WH, database=DB, schema=SC
     )
 
 def run(cmd):
+    # Run a command in the shell, printing it first
     print(f"\n$ {' '.join(cmd)}")
     subprocess.check_call(cmd)
 
